@@ -1,12 +1,16 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import {HiOutlineVideoCamera} from 'react-icons/hi'
 import {FiUserPlus, FiMoreHorizontal} from 'react-icons/fi'
 import Messages from './Messages'
 import Input from './Input'
 import Modal from './Modals/Modal'
+import { ChatContext } from '../context/ChatContext'
 
 
 const Chat = () => {
+
+    const {data} = useContext(ChatContext);
+
   const [isOpen, setIsOpen] = useState(false);
   const closeModal = () => {
     setIsOpen(false);
@@ -15,13 +19,10 @@ const Chat = () => {
     setIsOpen(true);
   };
 
-
-  
-  
   return (
     <div className='chatBoard'>
       <div className='topBar'>
-        <span>User</span>
+        <span>{data.user?.displayName}</span>
         <div className='chatFeatures'>
             <HiOutlineVideoCamera className="large-icon" onClick={openModal}/>      
             <FiUserPlus className="large-icon" onClick={openModal}/>
