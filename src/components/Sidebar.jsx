@@ -9,6 +9,21 @@ const Sidebar = () => {
       <Navbar/>
       <Search/>
       <Chats/>
+      <div style={{
+        backgroundColor: "#EFF99C",
+        textAlign: "center",
+        marginTop: 0,
+        height:"45px",
+        display: "flex",
+        flexDirection:"column",
+      }}>
+        <span>Powered by</span>
+        <span style={{
+          fontSize: "16px",
+          fontWeight:"bold",
+        }}>SHB</span>
+        
+      </div>
     </div>
   )
 }

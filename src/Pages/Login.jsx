@@ -31,6 +31,10 @@ const Login = () => {
           {error && <div>Something went wrong...</div>}
         </form>
         <p>Don't have an account ? <Link to="/register">Sign Up </Link></p>
+        <br/>
+        <p style={{
+          fontWeight:"bold",
+        }}>Please note it is a DEESKTOP application </p>
       </div>
     </div>
   )

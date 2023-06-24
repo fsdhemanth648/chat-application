@@ -73,6 +73,9 @@ const SignUp = () => {
           {error && <div>Something went wrong...</div>}
         </form>
         <p>Already have an account ? <Link to="/login">Login </Link></p>
+        <p style={{
+          fontWeight:"bold",
+        }}>Please note it is a DEESKTOP application </p>
       </div>
     </div>
   )
